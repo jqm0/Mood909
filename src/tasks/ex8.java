@@ -32,17 +32,18 @@ public class ex8 {
 						}
 					}
 				}
-			
-			}System.out.println(largest);
+
+			}
+			System.out.println(largest);
 		}
 	}
 
 	public static void main(String[] args) {
 		Integer[] riceStocks = { 900, 1200, 1200, 1210, 900, 750, 1050 };
-		Integer[] wheateStocks = { 1100, 1900, 1500, 1500, 1500, 1500};
+		Integer[] wheateStocks = { 1100, 1900, 1500, 1500, 1500, 1500 };
 		Integer[] cotonStocks = { 200, 700, 300, 290, 600, 750, 350 };
-		//findMostProfit(riceStocks);
-		findBestProfitOfeachDays(riceStocks,wheateStocks,cotonStocks);
+		// findMostProfit(riceStocks);
+		findBestProfitOfeachDays(riceStocks, wheateStocks, cotonStocks);
 	}
 
 }

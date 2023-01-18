@@ -1,11 +1,11 @@
 package tasks;
 
 public class Task15 {
-	//Given an array of integers, write a function to find the longest decreasing subarray.
+	//Given an array of integers, write a function to find the longest decreasing subArray.
 	public static void longestSubarray(int numbers []) {
 		for(int i = 0 ; i < numbers.length ; i++ ) {
 			for(int j = i+1 ;  j <  numbers.length ; j++) {
-				
+				//Still in prograss
 			}
 		}
 	}

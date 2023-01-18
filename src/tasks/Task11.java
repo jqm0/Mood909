@@ -20,6 +20,7 @@ public class Task11 {
 
 	public static void main(String[] args) {
 		int[] elments = { 12, 22, 22, 33, 4, 12 };
+		
 		findUniqueElments(elments);
 
 	}

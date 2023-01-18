@@ -17,7 +17,6 @@ public class OccurrencesHashMap {
 			}
 		}
 	
-
 		for(Map.Entry<String, Integer> elemants : hMap.entrySet()) {
 			System.out.println(elemants.getKey() + " is repeated " + elemants.getValue()+" Times");
 		}

@@ -1,21 +1,35 @@
 package tasks;
 
+import java.util.Arrays;
+
 public class Task17 {
-	public static void findMissing(int[] element) {
-		
-		for(int i = 0; i <element.length; i++ ) {
-			if(element[i] != (i+1 * 5) ) {
-				//Still in prograss
+	public static int[] findLongestSub(int[] element) {
+		int maxLongest = 0;
+		int startSub = 0;
+		int endSub = 0;
+		for (int i = 0; i < element.length; i++) {
+			int currentSubArray = 1;
+			while (i < element.length - 1 && element[i] > element[i + 1]) {
+				currentSubArray++;
+				i++;
+			}
+			if (currentSubArray > maxLongest) {
+				maxLongest = currentSubArray;
+				endSub = i + 1;
+				startSub = endSub - maxLongest;
 			}
 		}
-		
+
+		return Arrays.copyOfRange(element, startSub, endSub);
+
 	}
-	// Given an array of integers, write a function to find the missing number in
-	// the array where the missing number should be a multiple of 5.
 
 	public static void main(String[] args) {
-		int[] numbers = { 5, 10, 20, 25, 30 };
-		findMissing(numbers);
+		int[] numbers = { 1, 2, 3, 4, 5, 4, 3, 2, 1 };
+		int[] output = findLongestSub(numbers);
+		for (int number : output) {
+			System.out.print(number + " ");
+		}
 	}
 
 }
